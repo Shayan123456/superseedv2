@@ -220,6 +220,7 @@ function create_config( )
     "sban",
     "chat",
     "calc",
+    "voice",
     "welcome",
     "qr",
     "plugins",
