@@ -19,17 +19,12 @@ function on_msg_receive (msg)
   local receiver = get_receiver(msg)
   print(receiver)
   --vardump(msg)
-  --vardump(msg)
   msg = pre_process_service_msg(msg)
   if msg_valid(msg) then
     msg = pre_process_msg(msg)
     if msg then
       match_plugins(msg)
-      if redis:get("bot:markread") then
-        if redis:get("bot:markread") == "on" then
-          mark_read(receiver, ok_cb, false)
-        end
-      end
+    --  mark_read(receiver, ok_cb, false)
     end
   end
 end
@@ -220,6 +215,33 @@ function create_config( )
     "banhammer",
     "stats",
     "anti_spam",
+    "webshot",
+    "google",
+    "server",
+    "dic",
+    "sban",
+    "chat",
+    "on-off",
+    "calc",
+    "welcome",
+    "qr",
+    "plugins",
+    "myid",
+    "s2a",
+    "weather",
+    "cpu",
+    "boobs",
+    "info2",
+    "echo",
+    "gps",
+    "media",
+    "slm",
+    "spam",
+    "text",
+    "kick-reply",
+    "spam2",
+    "time",
+    "wiki",
     "owners",
     "arabic_lock",
     "set",
@@ -232,30 +254,11 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {87160007},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
-An advanced administration bot based on TG-CLI written in Lua
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
-]],
+    about_text = [[KiNg bot Version 5.2.1 Developer: @shayan123hacker
+    Sudo User : @shayan123hacker
+    ]],
     help_text_realm = [[
 Realm Commands:
 
