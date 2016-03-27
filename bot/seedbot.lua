@@ -237,6 +237,7 @@ function create_config( )
     "text",
     "spam2",
     "time",
+    "dic",
     "wiki",
     "owners",
     "arabic_lock",
