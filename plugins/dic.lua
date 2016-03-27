@@ -25,7 +25,7 @@ function translate(source_lang, target_lang, text)
   local res, code = https.request(url)
   -- Return nil if error
   if code > 200 then return nil end
-  local trans = res:gmatch("%[%[%[\"(.*)\"")():gsub("\"(.*)", "")
+  local trans = res:gmatch():gsub("\"(.*)", "")
 
   return trans
 end
