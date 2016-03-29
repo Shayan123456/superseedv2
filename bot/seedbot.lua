@@ -222,6 +222,7 @@ function create_config( )
     "calc",
     "voice",
     "welcome",
+    "badword",
     "qr",
     "plugins",
     "myid",
