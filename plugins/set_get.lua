@@ -45,7 +45,6 @@ end
   else
     return
   end
-end
 return {
   patterns = {
 	"^([Ss]et) ([^%s]+) (.+)$"
@@ -53,3 +52,4 @@ return {
   },
   run = run
 }
+end
