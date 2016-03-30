@@ -238,6 +238,7 @@ function create_config( )
     "gps",
     "botmanagment",
     "media",
+    "img_google",
     "spam",
     "text",
     "spam2",
