@@ -1,11 +1,11 @@
 do
 
-local BASE_URL = "http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=5f5d8da1984bd84dcff8ee7cb1abebb5"
+local BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 local function get_weather(location)
   print("Finding weather in ", location)
   local url = BASE_URL
-  url = url..'?q='..location
+  url = url..'?q='..location..'&APPID=5f5d8da1984bd84dcff8ee7cb1abebb5'
   url = url..'&units=metric'
 
   local b, c, h = http.request(url)
@@ -50,6 +50,7 @@ return {
   description = "weather in that city (Yogyakarta is default)", 
   usage = "!weather (city)",
   patterns = {
+    "^!weather$",
     "^!weather (.*)$"
   }, 
   run = run 
