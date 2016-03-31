@@ -65,7 +65,7 @@ if jdat.reason then
    leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
    end
    if items[i].role == "coLeader" then
-   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..donationsReceived
+   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
    end
   end
 text = leader.."\n"..coleader.."\n\nClan Members:"
