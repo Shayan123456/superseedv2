@@ -42,6 +42,54 @@ if jdat.reason then
      cmd:close()
   return text
  end
+ 
+ 
+ 
+ 
+ 
+ 
+  if matches[1]:lower() == 'Member' then
+  local Member = matches[2]
+  if string.match(matches[2], '^#.+$') then
+     Member = string.gsub(matches[2], '#', '')
+  end
+  Member = string.upper(Member)
+  local curl = 'curl -X GET --header "Accept: application/json" --header "authorization: Bearer '..apikey..'" "https://api.clashofclans.com/v1/clans/%23'..members..'/members"'
+  cmd = io.popen(curl)
+  
+  local result = cmd:read('*all')
+  local jdat = json:decode(result)
+if jdat.reason then
+      if jdat.reason == 'accessDenied' then return 'برای ثبت API Key خود به سایت زیر بروید\ndeveloper.clashofclans.com' end
+   return '#Error\n'..jdat.reason
+  end
+  local leader = ""
+  local coleader = ""
+  local items = jdat.items
+  leader = 'Clan Moderators: \n'
+   for i = 1, #items do
+   if items[i].role == "leader" then
+   leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name.."\nTrophies"..items[i].trophies.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
+   end
+   if items[i].role == "coLeader" then
+   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name.."\nTrophies"..items[i].trophies.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
+   end
+  end
+text = leader.."\n"..coleader.."\n\nClan Members:"
+  for i = 1, #items do
+  text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\nleague: "..items[i].league.name.."\nTrophies"..items[i].trophies.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
+  end
+  text = text.."\n\n@shayan123hacker"
+   cmd:close()
+  return text
+ end
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  if matches[1]:lower() == 'members' or matches[1]:lower() == 'clashmembers' or matches[1]:lower() == 'clanmembers' then
   local members = matches[2]
   if string.match(matches[2], '^#.+$') then
@@ -87,6 +135,7 @@ return {
 "^[/!](clashmembers) (.*)$",
 "^[/!](clanmembers) (.*)$",
 "^[/!](members) (.*)$",
+"^[/!](Member) (.*)$",
    },
    run = run
 }
