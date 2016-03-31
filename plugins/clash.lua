@@ -31,10 +31,13 @@ if jdat.reason then
      text = text..'\nType: '.. jdat.type
      text = text..'\nWar Frequency: '.. jdat.warFrequency
      text = text..'\nClan Level: '.. jdat.clanLevel
+     text = text..'\nLocation: '.. jdat.location.name
      text = text..'\nWar Wins: '.. jdat.warWins
+     text = text..'\war WinStreak: '.. jdat.warWinStreak
      text = text..'\nClan Points: '.. jdat.clanPoints
      text = text..'\nRequired Trophies: '.. jdat.requiredTrophies
      text = text..'\nMembers: '.. jdat.members
+     text = text..'\Flag: '.. jdat.badgeUrls.meduim
      text = text..'\n\n@shayan123hacker'
      cmd:close()
   return text
@@ -59,10 +62,10 @@ if jdat.reason then
   leader = 'Clan Moderators: \n'
    for i = 1, #items do
    if items[i].role == "leader" then
-   leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel
+   leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
    end
    if items[i].role == "coLeader" then
-   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel
+   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..donationsReceived
    end
   end
 text = leader.."\n"..coleader.."\n\nClan Members:"
