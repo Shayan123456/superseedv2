@@ -33,12 +33,12 @@ if jdat.reason then
      text = text..'\nClan Level: '.. jdat.clanLevel
      text = text..'\nLocation: '.. jdat.location.name
      text = text..'\nWar Wins: '.. jdat.warWins
-     text = text..'\war WinStreak: '.. jdat.warWinStreak
+     text = text..'\nwar WinStreak: '.. jdat.warWinStreak
      text = text..'\nClan Points: '.. jdat.clanPoints
      text = text..'\nRequired Trophies: '.. jdat.requiredTrophies
      text = text..'\nMembers: '.. jdat.members
-     text = text..'\Flag: '.. jdat.badgeUrls.meduim
-     text = text..'\n\n@shayan123hacker'
+     text = text..'\nFlag: '.. jdat.badgeUrls.medium
+     text = text..'\n@shayan123hacker'
      cmd:close()
   return text
  end
