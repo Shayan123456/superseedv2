@@ -1,11 +1,4 @@
---[[
 
-#
-#       @GPMod
-#   @dragon_born
-#
-
-]]
 
 local apikey = 
 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjYzOTRlNGMwLTY0ZDItNDVlNS1hYmVhLTFkZDY2M2NhMTgwMyIsImlhdCI6MTQ1OTI0MDIzMSwic3ViIjoiZGV2ZWxvcGVyL2EyNTY0N2E4LWQwNjEtZDdlNi1hYjRmLWEzNGE0YTFiMzNkNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjgyLjEwMi4xMy45OCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.TTNEetGPs4X1_cEWRr1ARBjgz5sXYGjxgI0b4wirgYb2vr6S1m8fQBP8imt9rMGq7D8eafEDZVMn3QiBiSshAg' 
@@ -38,7 +31,7 @@ if jdat.reason then
      text = text..'\nRequired Trophies: '.. jdat.requiredTrophies
      text = text..'\nMembers: '.. jdat.members
      text = text..'\nFlag: '.. jdat.badgeUrls.medium
-     text = text..'\n@shayan123hacker'
+     text = text..'\n@shayan123hacker'--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
      cmd:close()
   return text
  end
@@ -79,7 +72,7 @@ text = leader.."\n"..coleader.."\n\nClan Members:"
   for i = 1, #items do
   text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\nleague: "..items[i].league.name.."\nTrophies"..items[i].trophies.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
   end
-  text = text.."\n\n@shayan123hacker"
+  text = text.."\n\n@shayan123hacker--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
    cmd:close()
   return text
  end
@@ -120,7 +113,7 @@ text = leader.."\n"..coleader.."\n\nClan Members:"
   for i = 1, #items do
   text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\n"
   end
-  text = text.."\n\n@shayan123hacker"
+  text = text.."\n\n@shayan123hacker"--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
    cmd:close()
   return text
  end
