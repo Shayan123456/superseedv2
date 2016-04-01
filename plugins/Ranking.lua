@@ -42,7 +42,7 @@ if jdat.reason then
  if matches[1]:lower() == 'memberrank' or matches[1]:lower() == 'clashmembers' or matches[1]:lower() == 'clanmembers' then
   local members = matches[2]
   members = string.upper(members)
-  local curl = 'curl -X GET --header "Accept: application/json" --header "authorization: Bearer <API token>" "https://api.clashofclans.com/v1/locations/32000006/rankings/clans"'
+  local curl = 'curl -X GET --header "Accept: application/json" --header "authorization: Bearer '..apikey..'" "https://api.clashofclans.com/v1/locations/'..members..'/rankings/clans"'
   cmd = io.popen(curl)
   local result = cmd:read('*all')
   local jdat = json:decode(result)
@@ -51,30 +51,18 @@ if jdat.reason then
    return '#Error\n'..jdat.reason
   end
   local leader = ""
-  local R2 = ""
-  local R3 = ""
-  local R4 = ""
-  local R5 = ""
+  local coleader = ""
   local items = jdat.items
-  leader = 'Members Ranking: \n'
+  leader = 'Clan Moderators: \n'
    for i = 1, #items do
    if items[i].rank == "1" then
-   leader = leader.."\n1: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
+   leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
    end
    if items[i].rank == "2" then
-   R2 = R2.."\n2: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
-  end
-   if items[i].rank == "3" then
-   R3 = R3.."\n3: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
-  end
-     if items[i].rank == "4" then
-   R4 = R4.."\n2: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
-  end
-     if items[i].rank == "5" then
-   R5 = R5.."\n2: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
+   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
    end
   end
-text = leader.."\n"..R2.."\n"..R3.."\n"..R4"\n"..R5
+text = leader.."\n"..coleader.."\n\nClan Members:"
   for i = 1, #items do
   text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\n"
   end
