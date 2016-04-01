@@ -1,6 +1,6 @@
 local function run(msg,matches)
     if matches[1] == "help>" then
-    send_document("chat#id"..msg.to.id,"./superseedv2/Location-id.html", ok_cb, false)
+    send_document("chat#id"..msg.to.id,"./superseedv2/Location-id.json", ok_cb, false)
     end
 end
 
