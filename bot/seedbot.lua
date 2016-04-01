@@ -233,6 +233,7 @@ function create_config( )
     "aparat",
     "azan",
     "clash",
+    "Location-Id",
     "weather",
     "echo",
     "gps",
