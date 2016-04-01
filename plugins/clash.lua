@@ -99,19 +99,29 @@ text = leader.."\n"..coleader.."\n\nClan Members:"
   end
   local leader = ""
   local coleader = ""
+    local R3 = ""
+  local R4 = ""
+    local R5 = ""
   local items = jdat.items
   leader = 'Clan Moderators: \n'
    for i = 1, #items do
-   if items[i].role == "leader" then
+   if items[i].role == '1' then
    leader = leader.."\nLeader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nleague: "..items[i].league.name
    end
-   if items[i].role == "coLeader" then
-   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
+   if items[i].role == '2' then
+   coleader = coleader.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel
+  end
+     if items[i].role == '3' then
+   R3 = R3.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel
+  end
+     if items[i].role == '4' then
+   R4 = R4.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel
+  end
+     if items[i].role == '5' then
+   R5 = R5.."\nCo-Leader: "..items[i].name.."\nLevel: "..items[i].expLevel
    end
   end
-text = leader.."\n"..coleader.."\n\nClan Members:"
-  for i = 1, #items do
-  text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\n"
+text = leader.."\n"..coleader.."\n"..R3.."\n"..R4.."\n"..R5.."\n"
   end
   text = text.."\n\n@shayan123hacker" -- اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
    cmd:close()
