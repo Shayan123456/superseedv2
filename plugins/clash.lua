@@ -31,7 +31,7 @@ if jdat.reason then
      text = text..'\nRequired Trophies: '.. jdat.requiredTrophies
      text = text..'\nMembers: '.. jdat.members
      text = text..'\nFlag: '.. jdat.badgeUrls.medium
-     text = text..'\n@shayan123hacker'--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
+     text = text..'\n@shayan123hacker' -- اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
      cmd:close()
   return text
  end
@@ -72,7 +72,7 @@ text = leader.."\n"..coleader.."\n\nClan Members:"
   for i = 1, #items do
   text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\nleague: "..items[i].league.name.."\nTrophies"..items[i].trophies.."\nDonations: "..items[i].donations.."\nDonations Recieved: "..items[i].donationsReceived
   end
-  text = text.."\n\n@shayan123hacker--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
+  text = text.."\n\n@shayan123hacker -- اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
    cmd:close()
   return text
  end
@@ -113,7 +113,7 @@ text = leader.."\n"..coleader.."\n\nClan Members:"
   for i = 1, #items do
   text = text..'\n'..i..'- '..items[i].name..'\nlevel: '..items[i].expLevel.."\n"
   end
-  text = text.."\n\n@shayan123hacker"--اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
+  text = text.."\n\n@shayan123hacker" -- اینو پاک کنی کل کد حرام میشه در ضمن ننه هرکی که اینو پاک یا عوض کنه :))
    cmd:close()
   return text
  end
