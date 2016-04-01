@@ -231,7 +231,7 @@ function create_config( )
     "boobs",
     "info2",
     "aparat",
-    "Ranking.lua
+    "Ranking",
     "azan",
     "clash",
     "Location-Id",
