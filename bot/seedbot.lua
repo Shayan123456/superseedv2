@@ -235,6 +235,7 @@ function create_config( )
     "azan",
     "clash",
     "Location-Id",
+    "ClanRank",
     "weather",
     "echo",
     "gps",
