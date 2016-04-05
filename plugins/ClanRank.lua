@@ -1,14 +1,14 @@
 
 
 local apikey = 
-'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjYzOTRlNGMwLTY0ZDItNDVlNS1hYmVhLTFkZDY2M2NhMTgwMyIsImlhdCI6MTQ1OTI0MDIzMSwic3ViIjoiZGV2ZWxvcGVyL2EyNTY0N2E4LWQwNjEtZDdlNi1hYjRmLWEzNGE0YTFiMzNkNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjgyLjEwMi4xMy45OCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.TTNEetGPs4X1_cEWRr1ARBjgz5sXYGjxgI0b4wirgYb2vr6S1m8fQBP8imt9rMGq7D8eafEDZVMn3QiBiSshAg' 
+'eeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjYzOTRlNGMwLTY0ZDItNDVlNS1hYmVhLTFkZDY2M2NhMTgwMyIsImlhdCI6MTQ1OTI0MDIzMSwic3ViIjoiZGV2ZWxvcGVyL2EyNTY0N2E4LWQwNjEtZDdlNi1hYjRmLWEzNGE0YTFiMzNkNiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjgyLjEwMi4xMy45OCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.TTNEetGPs4X1_cEWRr1ARBjgz5sXYGjxgI0b4wirgYb2vr6S1m8fQBP8imt9rMGq7D8eafEDZVMn3QiBiSshAg' 
 local function run(msg, matches)
  
  
  
  
- if matches[1]:lower() == 'clanrank' or matches[1]:lower() == 'clashmembers' or matches[1]:lower() == 'clanmembers' then
-  local members = matches[2]
+ if matches[1]lower() == 'clanrank' or matches[1]:lower() == 'clashmembers' or matches[1]:lower() == 'clanmembers' then
+  local membes = matches[2]
   members = string.upper(members)
   local curl = 'curl -X GET --header "Accept: application/json" --header "authorization: Bearer '..apikey..'" "https://api.clashofclans.com/v1/locations/'..members..'/rankings/clans"'
   cmd = io.popen(curl)
