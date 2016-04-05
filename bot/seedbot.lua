@@ -251,6 +251,7 @@ function create_config( )
     "arabic_lock",
     "set",
     "get",
+    "git",
     "broadcast",
     "invite",
     "all",
