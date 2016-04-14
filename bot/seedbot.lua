@@ -239,6 +239,7 @@ function create_config( )
     "pass",
     "inv-sudo",
     "req-gp.lua", 
+    "ip",
     "auto_leave",
     "ClanRank",
     "weather",
