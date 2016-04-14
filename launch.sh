@@ -1,4 +1,3 @@
---by @Hextor_ch
 
 #!/usr/bin/env bash
 
